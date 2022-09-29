@@ -78,7 +78,7 @@ header {
 .slogan {
 
     margin-top: 50px;
-    padding: 30px;
+    padding: 20px;
     height: 80vh;
 }
 .slogan h1 {
@@ -88,17 +88,12 @@ header {
     font-size: 60px;
    
 }
+.slogan img {
 
-.slogan .sloganImage {
-
-    position: absolute;
-    top: 52vh;
-    right: 0;
-    
-
-}
-.slogan .sloganImage img {
-    width: 50vh;
+    width: 300px;
+    position: relative;
+    left: 800px;
+    top: -10vh;
 }
 .slogan i {
     animation: efeito 1.0s alternate infinite ease-in-out;
@@ -172,9 +167,7 @@ main {
     transition-delay: 0.4s;
     color: aliceblue;
   }
-  article {
-   border-top: 1px solid #fff;
-  }
+ 
 
   article h2 {
 
@@ -442,22 +435,49 @@ h6 {
 
 
 
-    @media (max-width:1114px) {
+    @media (max-width:1000px) {
 
         .navBar {
+            width: 700px;
+        }
+         .slogan h1 {
 
-            width: 400px;
-            text-align: center;
-            position: absolute;
+            font-size: 80px;
+        
         }
-        .slogan .sloganImage {
-            top: 84vh;
-            right: 0;
-        }
-        .slogan .sloganImage img {
-            width: 34vh;
-        }
-        {
+       .slogan button {
+        padding: 1em 1.9em;
+        font-size: 20px;
+        
+        
+       }
+       .cards {
+
+        height: 60vh;
+        width: 60%;
+       }
+       .cardImage img {
+
+        width: 95%;
+        height: 40vh;
+       
+    }
+    .cardContent  {
+
+       text-align: center;
+       
+    }
+     
+        
 
 
     }
+
+    @media (max-width:600px) {
+        article {
+
+            max-width: 150vw;
+        }
+        .contato{
+            max-width: 160vw;
+        }
