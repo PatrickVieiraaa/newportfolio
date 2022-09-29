@@ -14,9 +14,7 @@
     font-family: 'circ';
     src: url(/assets/FontsFree-Net-CircularStd-Bold.ttf);
 }
-html {
-    min-width: 1200px;
-}
+
 body {
 
     background-color:#10101a;
@@ -41,14 +39,16 @@ header {
 
 .navBar {
     position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top:-50px ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 40%;
-    height: 15vh;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 10px;
+    height: 12vh;
+   
     padding-right: 30px;
     background: rgba(42,43,56,.5);
     border: 0.1rem solid #2a2b37;
@@ -439,6 +439,7 @@ h6 {
 
         .navBar {
             width: 700px;
+            margin-top: -100px;
         }
          .slogan h1 {
 
@@ -474,6 +475,11 @@ h6 {
     }
 
     @media (max-width:600px) {
+
+        .navBar {
+
+            margin-top: -145px;
+        }
         article {
 
             max-width: 150vw;
@@ -481,3 +487,12 @@ h6 {
         .contato{
             max-width: 160vw;
         }
+
+    }
+
+    @media (max-width:450px) {
+
+        .navBar {
+            margin-top: -200px;
+        }
+    }
