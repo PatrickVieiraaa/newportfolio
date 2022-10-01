@@ -75,11 +75,10 @@ main {
     color: #fff;
 }
 
-.icons img {
+.icons a img{
 
-    height: 5vh;
-    width: 30px;
-    margin-left: 6px;
+    height: 7vh;
+    width: 60px;
 }
 .slogan {
 
