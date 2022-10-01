@@ -5,6 +5,7 @@
     
 }
 @import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 
 @font-face {
     font-family: 'mark';
@@ -18,6 +19,7 @@
 body {
 
     background-color:#10101a;
+    
 
 }
 #indicator {
@@ -36,7 +38,11 @@ header {
     height: 20vh;
   
 }
+main {
 
+    max-width: 950px;
+    margin: auto;
+}
 .navBar {
     position: fixed;
     top: 15%;
@@ -48,7 +54,6 @@ header {
     align-items: center;
     width: 40%;
     height: 12vh;
-   
     padding-right: 30px;
     background: rgba(42,43,56,.5);
     border: 0.1rem solid #2a2b37;
@@ -66,7 +71,7 @@ header {
     height: 100%;
 }
 .ps p {
-    color: aliceblue;
+    color: #fff;
 }
 
 .icons img {
@@ -77,17 +82,69 @@ header {
 }
 .slogan {
 
-    margin-top: 50px;
-    padding: 20px;
+    margin-top: 70px;
     height: 80vh;
 }
 .slogan h1 {
 
-    color: #fff;
-    font-family: 'mark';
-    font-size: 60px;
+    font-size: 11vh;
+    line-height: 12vh;
+    text-shadow: 0 0 5px #6A5495, 0 0 15px #6A5495, 0 0 20px #6A5495, 0 0 40px #6A5495, 0 0 60px #6A5495, 0 0 10px #6A5495, 0 0 98px #6A5495;
+      color: #fff6a9;
+    font-family: "Mark", cursive;
+    text-align: start;
+    animation: blink 8s infinite;
+    -webkit-animation: blink 8s infinite;
    
 }
+@-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+ 
+    text-shadow: 0 0 5px #6A5495, 0 0 15px #6A5495, 0 0 20px #6A5495, 0 0 40px #6A5495, 0 0 60px #6A5495, 0 0 10px #6A5495, 0 0 78px #ff0000;
+      color: #fff6a9;
+    }
+  }
+  
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+ 
+    text-shadow: 0 0 5px #6A5495, 0 0 15px #6A5495, 0 0 20px #6A5495, 0 0 40px #6A5495, 0 0 60px #6A5495, 0 0 10px #6A5495, 0 0 78px #6A5495;
+      color: #fff6a9;
+    }
+  }
+  
+
+
+
+
 .slogan img {
 
     width: 300px;
@@ -101,71 +158,43 @@ header {
 }
 @keyframes efeito {
     from{ 
-        filter: drop-shadow(0 0 0px #25316D);
+        filter: drop-shadow(0 0 0px #6A5495);
         
     }
     to{
-        filter: drop-shadow(0 0 10px  #25316D) ;
+        filter: drop-shadow(0 0 10px  #6A5495) ;
     }
     
 }
-main {
 
-    width: 1100px;
-    margin: auto;
-}
 
 /* Botões */
 
-.btn {
-    font-size: 17px;
-    background: transparent;
+
+.shadow__btn {
+    padding: 10px 20px;
+    margin-top: 80px;
     border: none;
-    padding: 1em 1.5em;
-    color: #ffedd3;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
     text-transform: uppercase;
-    position: relative;
-    transition: .5s ease;
-    margin-top: 100px;
-    cursor: pointer;
+    transition: 0.5s;
+    transition-property: box-shadow;
   }
   
-  .btn::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: #25316D;
-    transition: .5s ease;
+  .shadow__btn {
+    background: #6A5495;
+    box-shadow: 0 0 25px #6A5495;
   }
   
-  .btn:hover {
-    color: #FFF;
-    transition-delay: .5s;
-  }
-  
-  .btn:hover::before {
-    width: 100%;
-  }
-  
-  .btn::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0;
-    width: 100%;
-    background-color: #25316D;
-    transition: .4s ease;
-    z-index: -1;
-  }
-  
-  .btn:hover::after {
-    height: 100%;
-    transition-delay: 0.4s;
-    color: aliceblue;
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px #6A5495,
+                0 0 25px #6A5495,
+                0 0 50px #6A5495,
+                0 0 100px #6A5495;
   }
  
 
@@ -216,8 +245,8 @@ main {
 
     display: flex;
     align-items: center;
-    width: 70%;
-    height: 70vh;
+    width: 50vw;
+    
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -231,13 +260,13 @@ main {
     z-index: 99;
 }
 .cardImage  {
-    width:50% ;
+   
     margin-left: 50px;
    
 }
 .cardImage img {
 
-    width: 95%;
+    width: 30vw;
     height: 55vh;
     border-radius: 4.0em;
     cursor: pointer;
@@ -296,13 +325,14 @@ main {
 
     margin: 150px 150px ;
 
+
     
 }
-h6 {
+.tecnologias h6 {
     text-transform: Uppercase;
     margin-bottom: .5em;
     font-family: 'Rubik', sans-serif;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 900;
     color: #E4E5E6; }
     
@@ -367,7 +397,7 @@ h6 {
         
     }
     .icons img {
-        width: 100%;
+        width: 100px;
         height: 80%;
         padding: 5px;
     }
@@ -435,64 +465,216 @@ h6 {
 
 
 
-    @media (max-width:1000px) {
-
-        .navBar {
-            width: 700px;
-            margin-top: -100px;
-        }
-         .slogan h1 {
-
-            font-size: 80px;
-        
-        }
-       .slogan button {
-        padding: 1em 1.9em;
-        font-size: 20px;
-        
-        
-       }
-       .cards {
-
-        height: 60vh;
-        width: 60%;
-       }
-       .cardImage img {
-
-        width: 95%;
-        height: 40vh;
-       
-    }
-    .cardContent  {
-
-       text-align: center;
-       
-    }
-     
-        
-
-
-    }
-
-    @media (max-width:600px) {
+    @media (max-width:1600px) {
 
         .navBar {
 
-            margin-top: -145px;
+            width: 600px;
         }
-        article {
-
-            max-width: 150vw;
+        .cards {
+            width: 60vw;
+            height: 50vh;
         }
-        .contato{
-            max-width: 160vw;
-        }
-
+      
     }
-
-    @media (max-width:450px) {
-
+    @media (max-width:1200px) {
+        .slogan {
+            height: 60vh;
+        }
+        .cards {
+            width: 60vw;
+            height: 40vh;
+        }
+        .cardImage img {
+            width: 28vw;
+            height: 44vh;
+        }
+    }
+    @media (max-width:900px) {
         .navBar {
-            margin-top: -200px;
+
+            width: 400px;
+        }
+        .slogan h1 {
+            font-size: 7vh;
+            margin-left: 30px;
+            
+        }
+        .botoes {
+            margin-left: 30px ;
+        }
+        article h2,p {
+
+            margin-left: 30px;
+           
+        }
+        article p {
+
+            font-size: 17px;
+            padding-right: 30px;
+
+        }
+        .tecnologias h6 {
+            font-size: 3rem;
+        }
+        .projetos h3,h5 {
+
+            margin-left: 30px;
+        }
+        .cards {
+            width: 80vw;
+            height: 35vh;
+            
+        }
+        .cardContent h2 {
+            font-size: 20px;
+        }
+        .cardContent a {
+
+            font-size: 12px;
+        }
+        .cardImage img {
+
+            width: 40vw;
+            height: 40vh;
+            
+        }
+        .caixa {
+
+            height: 60px;
+        width: 55px;
+        }
+        .icons {
+            width: 70px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .icons img {
+            
+            height: 80%;
+            padding: 5px;
+        }
+        .tecnologias {
+            display: flex;
+            flex-direction: column;
+            margin-top: 150px ;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contato h4 {
+
+            margin-left: 30px;
+        }
+        .contato a {
+
+            margin-left: 30px;
+        }
+        .contato p {
+
+            padding-right: 40px;
         }
     }
+        @media (max-width:600px) {
+            .slogan {
+                height: 60vh;
+                border-bottom:1px solid #C4C4C4;
+            }
+            .slogan h1 {
+
+                font-size: 5vh;
+                line-height: 70px;
+            }
+            .cards {
+
+                width: 40vh;
+                height: 25vh;
+            }
+            .cardImage img{
+
+                width: 38vw;
+                height: 30vh;
+                margin-right: 10px;
+            }
+            .cardImage {
+                margin-left: 10px;
+                
+            }
+            .cardContent {
+                text-align: center;
+            }
+            .caixa {
+                width: 45px;
+            }
+        }
+
+        @media (max-width:480px) {
+            .navBar {
+
+                width: 330px;
+            }
+            .slogan h1 {
+
+                font-size: 4.2vh;
+                line-height: 40px;
+                margin-left: 30px;
+            }
+            article h2, p{
+
+                margin-left: 20px;
+                
+            }
+            article p {
+
+                font-size: 14px;
+            }
+
+            .projetos h3, h5 {
+
+                margin-left: 20px;
+            } 
+
+            .contato h4, p {
+
+                margin-left: 20px;
+            }
+            .contato h4 {
+
+                font-size: 30px;
+            }
+            .contato p {
+
+                font-size: 14px;
+            }
+
+
+            .cardContent img {
+
+                right: -6px;
+                top: -60px;
+            }
+            .caixa {
+                width: 40px;
+                height: 50px;
+                flex-wrap: wrap;
+                display: flex;
+            }
+            .icons img {
+            
+                height: 70%;
+                width: 40px;
+                
+                padding: 3px;
+            }
+            .caixa:hover {
+                margin-top: 40px;
+                transition: all 0.5s;
+            }
+            .tecnologias h6 {
+                font-size: 2.5rem;
+            }
+        }
