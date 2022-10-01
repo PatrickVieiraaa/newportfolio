@@ -16,21 +16,33 @@
     font-family: 'circ';
     src: url(/assets/FontsFree-Net-CircularStd-Bold.ttf);
 }
-
+.cursor {
+    width: 50px;
+    height: 50px;
+    border: 2px dashed #6A5495;
+    border-radius: 100%;
+    position: absolute;
+    animation: cursor 5.0s linear infinite;
+    z-index: 101;
+    box-shadow: 0 0 5px #6A5495, 0 0 5px #6A5495, 0 0 15px #6A5495, 0 0 20px #6A5495, 0 0 20px #6A5495, 0 0 10px #6A5495, 0 0 18px #6A5495;
+}
+@keyframes cursor {
+    to {
+        transform: rotate(0deg);
+        filter: drop-shadow(0 0 0px #6A5495);
+    }
+    from {
+        transform: rotate(-360deg);
+        filter: drop-shadow(0 0 30px  #6A5495) ;
+    }
+}
 body {
 
     background-color:#10101a;
     
 
 }
-#indicator {
-    background-color: #25316D;
-    height: .35rem;
-    width: 0;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-}
+
 
 header {
     display: flex;
