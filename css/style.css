@@ -184,6 +184,7 @@ main {
     text-transform: uppercase;
     transition: 0.5s;
     transition-property: box-shadow;
+    cursor: pointer;
   }
   
   .shadow__btn {
