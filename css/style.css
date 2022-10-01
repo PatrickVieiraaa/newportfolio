@@ -504,6 +504,9 @@ main {
         }
     }
     @media (max-width:900px) {
+        .cursor {
+            display: none;
+        }
         .navBar {
 
             width: 400px;
